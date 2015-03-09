@@ -1,0 +1,49 @@
+#content{
+	margin-left: 10px;
+	margin-top: 20px;
+}
+
+#discipline_label{
+	font-size: 30px;
+	color: black;
+	font-family: serif;
+	margin-right: 10px;
+	vertical-align: center;
+}
+
+.discipline_options{
+	margin-right: 20px;
+	margin-top: 20px;
+	font-family: sans-serif;
+	font-size: 20px;
+	vertical-align: center;
+}
+
+#submitB{
+	font-size: 20px;
+	color: white;
+	background-color: green;
+	vertical-align: center;
+
+	border-radius: 9px;
+	border-top: 1px solid green ;
+	border-right: 3px solid #708090;
+	border-bottom:3px solid #708090 ;
+	border-left: 1px solid green ;
+}
+
+#submitB:hover{
+	color: black;
+	background-color: #90EE90;
+}
+
+#submitB:active{
+	color: white;
+	background-color: #006400;
+}
+
+#appNoTag{
+	color: green;
+	font-style: bold;
+	font-size: 20px;
+}

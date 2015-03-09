@@ -1,0 +1,36 @@
+#body{
+	max-width: 99%;
+}
+
+#header{
+	background-color: #4B0082;
+}
+
+#logo{
+	text-align: left;
+	background-color: white;	
+	height: 26.9%;
+	width: 90%;
+}
+
+#college_name{
+	text-align: center;
+	color: white;
+	font-style: bold;
+	font-family: serif;
+	font-size: 200%;
+}
+
+#sub_headline{
+	margin-top: 0.1%;
+	text-align: center;
+	color: #778899;
+	font-style: bold;
+	font-family: serif;
+	font-size: 150%;
+}
+
+.vcenter{
+	display: inline-block;
+	margin-top: 5%;
+}
