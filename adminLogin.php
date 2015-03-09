@@ -18,35 +18,34 @@
 	</head>
 	<body id="body">
 		<?php include("adLoginHeader.php");?>
-		
+		<?php
+			if(isset($_POST['submit']))
+			{
+				//echo "hi";
+				echo "";
+				$email = $_POST['emailId'];	
+				if(empty(trim($email)))									
+				{
+					echo "<div class='col-md-12 alert alert-danger' role='alert'>
+						<span class='glyphicon glyphicon-exclamation-sign' aria-hidden='true'></span>
+						<span class='sr-only'>Error:</span>
+
+
+						Email-Id can not be empty
+						</div>";
+				}
+				elseif(!filter_var($email, FILTER_VALIDATE_EMAIL))
+				{
+				  echo "Invalid email format";
+				}
+				else
+				{
+					
+				}										
+			}									
+		?>			 
 		<form class="col-md-offset-4 col-md-4 topMargin" method="post" action="adminLogin.php">
-			<div class="panel panel-info">	
-				<?php
-								if(isset($_POST['submit']))
-								{
-									//echo "hi";
-									echo "";
-									$email = $_POST['emailId'];	
-									if(empty(trim($email)))									
-									{
-										echo "<div class='col-md-8 alert alert-danger' role='alert'>
-											<span class='glyphicon glyphicon-exclamation-sign' aria-hidden='true'></span>
-											<span class='sr-only'>Error:</span>
-
-
-											Email-Id can not be empty
-											</div>";
-									}
-									elseif(!filter_var($email, FILTER_VALIDATE_EMAIL))
-									{
-									  echo "Invalid email format";
-									}
-									else
-									{
-										
-									}										
-								}									
-				?>			 
+			<div class="panel panel-info">					
 				<div class="panel-heading center">LOGIN</div>
 				<div class="panel-body">
 					<p class="requireTag">*require fields</p>

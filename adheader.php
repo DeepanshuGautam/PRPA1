@@ -1,17 +1,22 @@
 <!DOCTYPE>
 <html>
-	<head>
-		<title>Set Qualification Criteria</title>
+	<head>		
 		<link rel="stylesheet" type="text/css" href="adheaderCSS.css">
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+
+		<script type="text/javascript" src="js/jquery.min.js"></script>	
+		<script type="text/javascript" src="js/jquery-ui.min.js"></script>
+		<script type="text/javascript" src="js/bootstrap.min.js"></script>
 	</head>
 	<body id="body">
 		<div id="header" class="row">
 			<div class="col-lg-2"><a href="adminHome.php"><img id="logo" src="logo.png"></a></div>	
 			<div class="col-lg-10">
-				<div class="vcenter">
-					<div class="col-middle" id="college_name">Indian Institute of Information Technology, Design & Manufacturing</div>
-					<div class="col-middle" id="sub_headline">(An Institute of National Importance Fully Funded by Govt. of India)</div>											
+				<div class="row col-md-12 vcenter" id="college_name">
+					Indian Institute of Information Technology, Design & Manufacturing
+				</div>
+				<div class="row col-md-12 vcenter" id="sub_headline">(An Institute of National Importance Fully Funded by Govt. of India)											
 				</div>
 			</div> 
 		</div>
