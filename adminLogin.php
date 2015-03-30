@@ -13,7 +13,7 @@
 		<script type="text/javascript" src="js/bootstrap.min.js"></script>
 
 		<link rel="stylesheet" type="text/css" href="adminLoginCSS.css" media="screen, projection">	
-		<!-- <script type="text/javascript" src="adminLogin.js"></script> -->
+		<script type="text/javascript" src="adminLogin.js"></script>
 
 	</head>
 	<body id="body">
@@ -24,24 +24,41 @@
 				//echo "hi";
 				echo "";
 				$email = $_POST['emailId'];	
-				if(empty(trim($email)))									
+				$pass = $_POST['password'];
+				if(empty(trim($email)) && empty(trim($pass)))									
 				{
 					echo "<div class='col-md-12 alert alert-danger' role='alert'>
 						<span class='glyphicon glyphicon-exclamation-sign' aria-hidden='true'></span>
 						<span class='sr-only'>Error:</span>
 
 
-						Email-Id can not be empty
+						Enter your email-id and password!
+						</div>";
+				}
+				else if(empty(trim($email)) && !empty(trim($pass)))
+				{
+					echo "<div class='col-md-12 alert alert-danger' role='alert'>
+						<span class='glyphicon glyphicon-exclamation-sign' aria-hidden='true'></span>
+						<span class='sr-only'>Error:</span>
+
+
+						Enter your email-id!
+						</div>";
+				}
+				else if(!empty(trim($email)) && empty(trim($pass)))
+				{
+					echo "<div class='col-md-12 alert alert-danger' role='alert'>
+						<span class='glyphicon glyphicon-exclamation-sign' aria-hidden='true'></span>
+						<span class='sr-only'>Error:</span>
+
+
+						Enter your password!
 						</div>";
 				}
 				elseif(!filter_var($email, FILTER_VALIDATE_EMAIL))
 				{
 				  echo "Invalid email format";
-				}
-				else
-				{
-					
-				}										
+				}								
 			}									
 		?>			 
 		<form class="col-md-offset-4 col-md-4 topMargin" method="post" action="adminLogin.php">
@@ -53,14 +70,21 @@
 						<div class="row">
 							<label class="col-md-4">Email address*</label>																		
 						</div>	
-						<input id="emailId" name="emailId" type="email" class="form-control" placeholder="Enter email">
+						<input id="emailId" name="emailId" type="email" class="form-control" placeholder="Enter email"
+							value="
+							<?php
+								global $email;
+								echo $email;
+							?>
+							"
+						>
 					</div>
 					<div class="form-group">
 						<div class="row">
-							<label class="col-md-6" for="exampleInputPassword1">Password*</label>
+							<label class="col-md-6">Password*</label>
 							<label class="col-md-6"></label>
 						</div>
-						<input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+						<input type="password" class="form-control" name="password" placeholder="Password"						>
 					</div>							
 					<div class="center topMargin">
 						<button name="submit" type="submit" class="btn btn-block btn-success">Submit</button>	

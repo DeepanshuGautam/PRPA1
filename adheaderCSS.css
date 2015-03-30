@@ -1,23 +1,26 @@
-#body{
-	min-width: 700px;
-	min-height: 500px;
-
-	width: 100%;
-	height: auto;
+#body{		
+	float: none;
+	min-width: 1366px;
+	max-width: 1366px;
+	overflow: hidden;	
 }
 
-#header{
-	background-color: #4B0082;
+.header{			
+	background-color: #4B0082;	
 }
 
-#logo{
-	text-align: left;
+#logo{				
 	background-color: white;	
 	height: 150px;
 	width: 150px;
 }
 
-#college_name{
+.name{	
+	float: none;
+}
+
+#college_name{	
+	margin-left: 5px;
 	text-align: center;
 	color: white;
 	font-style: bold;
@@ -25,7 +28,8 @@
 	font-size: 30px;
 }
 
-#sub_headline{
+#sub_headline{		
+	margin-left: 5px;		
 	margin-top: 2px;
 	text-align: center;
 	color: #778899;
@@ -35,7 +39,6 @@
 }
 
 .vcenter{
-	margin-top: 30px;	
-	display: inline-block;
+	margin-top: 30px;		
 	vertical-align: middle;
 }
